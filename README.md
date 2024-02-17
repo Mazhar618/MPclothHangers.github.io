@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
+    <title>MP CLOTH HANGERS</title>
     <style>
         /* Resetting default margin and padding */
         body, h1, h2, p, ul, li {
@@ -15,12 +15,13 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
+            background-color: #000;
+            color: #fff;
         }
 
         /* Header styles */
         header {
             background-color: #333;
-            color: #fff;
             padding: 20px;
             text-align: center;
         }
@@ -54,7 +55,7 @@
         section {
             padding: 20px;
             margin: 20px 0;
-            background-color: #f9f9f9;
+            background-color: #222;
         }
 
         section h2 {
@@ -65,12 +66,20 @@
         /* Footer styles */
         footer {
             background-color: #333;
-            color: #fff;
             text-align: center;
             padding: 10px;
             position: fixed;
             bottom: 0;
             width: 100%;
+        }
+
+        /* Flash styles */
+        .flash {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 5px 10px;
+            display: inline-block;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -78,7 +87,7 @@
     <!-- Header -->
     <header>
         <h1>MP CLOTH HANGERS</h1>
-        <p>Hang Right Hang Tight</p>
+        <p>Hang Right, Hang Tight</p>
     </header>
 
     <!-- Navigation Menu -->
@@ -93,18 +102,36 @@
 
     <!-- Content Sections -->
     <section>
-        <h2>Section 1</h2>
-        <p>This is the content of section 1.</p>
+        <h2>Products</h2>
+        <ul>
+            <li>Regular <span class="flash">₹200 OFF!</span></li>
+            <ul>
+                <li>8 Feet 6 Rods - ₹2800</li>
+                <li>7 Feet 6 Rods - ₹2700</li>
+                <li>6 Feet 6 Rods - ₹2600</li>
+                <li>5 Feet 6 Rods - ₹2500</li>
+                <li>4 Feet 6 Rods - ₹2400</li>
+            </ul>
+            <li>Heavy <span class="flash">₹500 OFF!</span></li>
+            <ul>
+                <li>8 Feet 6 Rods - ₹3100</li>
+                <li>7 Feet 6 Rods - ₹3000</li>
+                <li>6 Feet 6 Rods - ₹2900</li>
+                <li>5 Feet 6 Rods - ₹2800</li>
+                <li>4 Feet 6 Rods - ₹2700</li>
+            </ul>
+        </ul>
     </section>
 
     <section>
-        <h2>Section 2</h2>
-        <p>This is the content of section 2.</p>
+        <h2>About Us</h2>
+        <p>At MP Cloth Hangers, we specialize in providing high-quality, space-saving cloth hanger solutions to our customers. Our ceiling-mounted cloth hangers are designed to maximize vertical space in your home, making it easier than ever to dry and store your clothes without taking up valuable floor space.</p>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+        <p>Contact: 9133449704 (Mazhar), 8374166274 (Praveen)</p>
+        <p>&copy; 2024 MP CLOTH HANGERS. All rights reserved.</p>
     </footer>
 </body>
 </html>
