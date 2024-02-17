@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -77,8 +77,8 @@
 <body>
     <!-- Header -->
     <header>
-        <h1>Your Website Name</h1>
-        <p>Your slogan or brief description here</p>
+        <h1>MP CLOTH HANGERS</h1>
+        <p>Hang Right Hang Tight</p>
     </header>
 
     <!-- Navigation Menu -->
