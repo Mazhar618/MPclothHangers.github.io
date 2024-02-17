@@ -5,6 +5,51 @@ Welcome to the MP Cloth Hangers website! This repository contains the source cod
 About Us
 At MP Cloth Hangers, we specialize in providing high-quality, space-saving cloth hanger solutions to our customers. Our ceiling-mounted cloth hangers are designed to maximize vertical space in your home, making it easier than ever to dry and store your clothes without taking up valuable floor space.
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Your Website Name</h1>
+        <p>Your slogan or brief description here</p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Sections -->
+    <section>
+        <h2>Section 1</h2>
+        <p>This is the content of section 1.</p>
+    </section>
+
+    <section>
+        <h2>Section 2</h2>
+        <p>This is the content of section 2.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
 Features
 Space-saving Design: Our ceiling cloth hangers are mounted overhead, freeing up floor space in your home.
 Durable Construction: Made from high-quality materials, our cloth hangers are built to last and can support heavy loads.
