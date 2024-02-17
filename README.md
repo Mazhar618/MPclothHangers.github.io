@@ -10,7 +10,7 @@ At MP Cloth Hangers, we specialize in providing high-quality, space-saving cloth
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
+    <title>BEST IN TOWN</title>
     <style>
         /* Add your CSS styles here */
     </style>
@@ -18,7 +18,7 @@ At MP Cloth Hangers, we specialize in providing high-quality, space-saving cloth
 <body>
     <!-- Header -->
     <header>
-        <h1>Your Website Name</h1>
+        <h1>MP CLOTH HANGERS</h1>
         <p>Your slogan or brief description here</p>
     </header>
 
@@ -45,7 +45,7 @@ At MP Cloth Hangers, we specialize in providing high-quality, space-saving cloth
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+        <p>&copy; 2024 MP CLOTH HANGERS. All rights reserved.</p>
     </footer>
 </body>
 </html>
