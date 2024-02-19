@@ -7,28 +7,9 @@
         /* Your CSS styles here */
         body {
             /* Dark mode styles */
-            background-color: #000;
+            background-color: #272727;
             color: #fff;
-        }
-
-        .dark-mode body {
-            /* Light mode styles */
-            background-color: #fff;
-            color: #000;
-        }
-        
-        /* Resetting default margin and padding */
-        body, h1, h2, p, ul, li {
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Global styles */
-        body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #000;
-            color: #fff;
         }
 
         /* Header styles */
@@ -36,44 +17,66 @@
             background-color: #333;
             padding: 20px;
             text-align: center;
+            color: #fff;
         }
 
         header h1 {
-            font-size: 24px;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-bottom: 20px;
         }
 
         /* Navigation menu styles */
         nav {
             background-color: #444;
             padding: 10px;
+            text-align: center;
         }
 
         nav ul {
             list-style-type: none;
-            text-align: center;
+            display: inline;
         }
 
         nav ul li {
-            display: inline;
+            display: inline-block;
             margin-right: 20px;
         }
 
         nav ul li a {
             color: #fff;
             text-decoration: none;
-            cursor: pointer;
+            padding: 10px;
+            transition: all 0.3s ease;
         }
 
-        /* Content section styles */
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        /* Content sections styles */
         section {
             padding: 20px;
             margin: 20px 0;
-            background-color: #222;
+            background-color: #333;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1s ease;
         }
 
         section h2 {
-            font-size: 20px;
+            font-size: 24px;
             margin-bottom: 10px;
+            color: #fff;
+        }
+
+        section p {
+            color: #ccc;
         }
 
         /* Footer styles */
@@ -84,11 +87,8 @@
             position: fixed;
             bottom: 0;
             width: 100%;
-            transition: transform 0.3s ease;
-        }
-
-        .footer-hidden {
-            transform: translateY(100%);
+            color: #fff;
+            animation: slideInUp 1s ease;
         }
 
         /* Flash styles */
@@ -132,12 +132,24 @@
         }
 
         th {
-            background-color: #444;
+            background-color: #555;
             color: #fff;
         }
 
         td {
-            background-color: #222;
+            background-color: #444;
+            color: #ccc;
+        }
+
+        /* Keyframe animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInUp {
+            from { transform: translateY(100px); }
+            to { transform: translateY(0); }
         }
     </style>
 </head>
@@ -220,12 +232,6 @@
                 </tr>
             </tbody>
         </table>
-        <div class="flash">Flash Discount</div>
-    </section>
-
-    <section>
-        <h2>About Us</h2>
-        <p>At MP Cloth Hangers, we specialize in providing high-quality, space-saving cloth hanger solutions to our customers. Our ceiling-mounted cloth hangers are designed to maximize vertical space in your home, making it easier than ever to dry and store your clothes without taking up valuable floor space.</p>
     </section>
 
     <!-- Footer -->
@@ -237,14 +243,17 @@
     <script>
         // Function to show home section
         function showHome() {
-            document.getElementById('home').style.display = 'block';
-            document.getElementById('products').style.display = 'none';
+            var homeSection = document.getElementById('home');
+            var productsSection = document.getElementById('products');
+
+            homeSection.style.display = 'block';
+            productsSection.style.display = 'none';
         }
 
         // Function to show products section
         function showProducts() {
-            document.getElementById('home').style.display = 'none';
-            document.getElementById('products').style.display = 'block';
+            var productsSection = document.getElementById('products');
+            productsSection.style.display = 'block';
         }
 
         // Hide footer when scrolling
