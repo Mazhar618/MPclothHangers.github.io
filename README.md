@@ -7,8 +7,8 @@
         /* Your CSS styles here */
         body {
             /* Dark mode styles */
-            background-color: #272727;
-            color: #fff;
+            background-color: #0c0c0c;
+            color: #f2f2f2;
             font-family: Arial, sans-serif;
         }
 
@@ -63,7 +63,7 @@
         section {
             padding: 20px;
             margin: 20px 0;
-            background-color: #333;
+            background-color: #222;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             animation: fadeIn 1s ease;
@@ -241,6 +241,12 @@
         <p>At MP Cloth Hangers, we specialize in providing high-quality, space-saving cloth hanger solutions to our customers. Our ceiling-mounted cloth hangers are designed to maximize vertical space in your home, making it easier than ever to dry and store your clothes without taking up valuable floor space.</p>
         <p>Contact: 9133449704 (Mazhar), 8374166274 (Praveen)</p>
     </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>Contact: 9133449704 (Mazhar), 8374166274 (Praveen)</p>
+        <p>&copy; 2024 MP CLOTH HANGERS. All rights reserved.</p>
+    </footer>
 
     <script>
         // Function to show home section
