@@ -88,6 +88,7 @@
             bottom: 0;
             width: 100%;
             color: #fff;
+            display: none;
             animation: slideInUp 1s ease;
         }
 
@@ -165,7 +166,7 @@
         <ul>
             <li><a href="#" onclick="showHome()">Home</a></li>
             <li><a href="#" onclick="showProducts()">Products</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><a href="#" onclick="showAbout()">About Us</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
@@ -234,37 +235,42 @@
         </table>
     </section>
 
-    <!-- Footer -->
-    <footer id="footer">
+    <!-- About Us Section -->
+    <section id="about" class="about" style="display: none;">
+        <h2>About Us</h2>
+        <p>At MP Cloth Hangers, we specialize in providing high-quality, space-saving cloth hanger solutions to our customers. Our ceiling-mounted cloth hangers are designed to maximize vertical space in your home, making it easier than ever to dry and store your clothes without taking up valuable floor space.</p>
         <p>Contact: 9133449704 (Mazhar), 8374166274 (Praveen)</p>
-        <p>&copy; 2024 MP CLOTH HANGERS. All rights reserved.</p>
-    </footer>
+    </section>
 
     <script>
         // Function to show home section
         function showHome() {
             var homeSection = document.getElementById('home');
             var productsSection = document.getElementById('products');
+            var aboutSection = document.getElementById('about');
+            var footer = document.getElementById('footer');
 
             homeSection.style.display = 'block';
             productsSection.style.display = 'none';
+            aboutSection.style.display = 'none';
+            footer.style.display = 'none';
         }
 
         // Function to show products section
         function showProducts() {
             var productsSection = document.getElementById('products');
             productsSection.style.display = 'block';
+            var footer = document.getElementById('footer');
+            footer.style.display = 'block';
         }
 
-        // Hide footer when scrolling
-        window.addEventListener('scroll', function() {
-            const footer = document.getElementById('footer');
-            if (window.scrollY > 100) {
-                footer.classList.add('footer-hidden');
-            } else {
-                footer.classList.remove('footer-hidden');
-            }
-        });
+        // Function to show about us section
+        function showAbout() {
+            var aboutSection = document.getElementById('about');
+            aboutSection.style.display = 'block';
+            var footer = document.getElementById('footer');
+            footer.style.display = 'block';
+        }
     </script>
 </body>
 </html>
