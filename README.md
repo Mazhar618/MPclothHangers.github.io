@@ -9,10 +9,18 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f3f3f3;
-            color: #333;
+            color: #333; /* Default text color */
+            background-color: #f3f3f3; /* Default background color */
+            transition: background-color 0.5s, color 0.5s; /* Smooth transition for background and text color */
         }
 
+        /* Dark mode styles */
+        body.dark-mode {
+            color: #fff; /* Text color in dark mode */
+            background-color: #333; /* Background color in dark mode */
+        }
+
+        /* Other styles remain unchanged */
         header {
             background-color: #333;
             color: #fff;
@@ -63,6 +71,7 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+            display: none; /* Hide footer by default */
         }
 
         /* Product Table */
@@ -124,6 +133,9 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+
+    <!-- Dark Mode Button -->
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
     <!-- Content Sections -->
     <section id="home">
@@ -207,15 +219,10 @@
     </footer>
 
     <script>
-        // Function to handle smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+        // Function to toggle dark mode
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
     </script>
 </body>
 </html>
