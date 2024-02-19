@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -71,6 +70,11 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .footer-hidden {
+            transform: translateY(100%);
         }
 
         /* Flash styles */
@@ -80,6 +84,12 @@
             padding: 5px 10px;
             display: inline-block;
             margin-bottom: 10px;
+            animation: flashAnimation 1s ease infinite alternate;
+        }
+
+        @keyframes flashAnimation {
+            0% { opacity: 1; }
+            100% { opacity: 0.5; }
         }
     </style>
 </head>
@@ -129,9 +139,20 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer id="footer">
         <p>Contact: 9133449704 (Mazhar), 8374166274 (Praveen)</p>
         <p>&copy; 2024 MP CLOTH HANGERS. All rights reserved.</p>
     </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const footer = document.getElementById('footer');
+            if (window.scrollY > 100) {
+                footer.classList.add('footer-hidden');
+            } else {
+                footer.classList.remove('footer-hidden');
+            }
+        });
+    </script>
 </body>
 </html>
