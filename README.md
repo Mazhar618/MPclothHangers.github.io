@@ -10,6 +10,8 @@
             background-color: #0c0c0c;
             color: #f2f2f2;
             font-family: Arial, sans-serif;
+            margin: 0; /* Reset default margin */
+            padding: 0; /* Reset default padding */
         }
 
         /* Header styles */
@@ -18,6 +20,12 @@
             padding: 20px;
             text-align: center;
             color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* Ensure header stays on top */
+            transition: background-color 0.3s; /* Smooth color transition */
         }
 
         header h1 {
@@ -40,6 +48,8 @@
         nav ul {
             list-style-type: none;
             display: inline;
+            margin: 0;
+            padding: 0;
         }
 
         nav ul li {
@@ -152,6 +162,27 @@
             from { transform: translateY(100px); }
             to { transform: translateY(0); }
         }
+
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+            header {
+                padding: 10px;
+            }
+            header h1 {
+                font-size: 24px;
+            }
+            header p {
+                font-size: 16px;
+            }
+            nav ul li {
+                margin-right: 10px;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body>
@@ -164,9 +195,9 @@
     <!-- Navigation Menu -->
     <nav>
         <ul>
-            <li><a href="#" onclick="showHome()">Home</a></li>
-            <li><a href="#" onclick="showProducts()">Products</a></li>
-            <li><a href="#" onclick="showAbout()">About Us</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About Us</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
@@ -277,6 +308,17 @@
             var footer = document.getElementById('footer');
             footer.style.display = 'block';
         }
+
+        // Change header background color on scroll
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('header');
+            var scrollPosition = window.scrollY;
+            if (scrollPosition > 50) {
+                header.style.backgroundColor = '#222'; // Darken header background color
+            } else {
+                header.style.backgroundColor = '#333'; // Original header background color
+            }
+        });
     </script>
 </body>
 </html>
