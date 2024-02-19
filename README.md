@@ -48,6 +48,7 @@
         nav ul li a {
             color: #fff;
             text-decoration: none;
+            cursor: pointer;
         }
 
         /* Content section styles */
@@ -91,6 +92,11 @@
             0% { opacity: 1; }
             100% { opacity: 0.5; }
         }
+
+        /* Product styles */
+        .products {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -103,15 +109,14 @@
     <!-- Navigation Menu -->
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Products</a></li>
+            <li><a href="#" onclick="showProducts()">Products</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Content Sections -->
-    <section>
+    <section id="products" class="products">
         <h2>Products</h2>
         <ul>
             <li>Regular <span class="flash">₹200 OFF!</span></li>
@@ -145,6 +150,11 @@
     </footer>
 
     <script>
+        function showProducts() {
+            var productsSection = document.getElementById('products');
+            productsSection.style.display = 'block';
+        }
+
         window.addEventListener('scroll', function() {
             const footer = document.getElementById('footer');
             if (window.scrollY > 100) {
