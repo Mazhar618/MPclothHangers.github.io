@@ -5,11 +5,106 @@
     <title>MP CLOTH HANGERS</title>
     <style>
         /* Your CSS styles here */
-        /* Existing styles remain unchanged */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+            color: #333;
+        }
 
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            color: #fff;
+        }
+
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Product Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #555;
+            color: #fff;
+            text-align: left;
+        }
+
+        /* Flash Sale */
+        .flash {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 5px 10px;
+            display: inline-block;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            animation: flashAnimation 1s ease infinite alternate;
+        }
+
+        @keyframes flashAnimation {
+            0% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
@@ -23,10 +118,10 @@
     <!-- Navigation Menu -->
     <nav>
         <ul>
-            <li><a href="#home" onclick="showSection('home')">Home</a></li>
-            <li><a href="#products" onclick="showSection('products')">Products</a></li>
-            <li><a href="#about" onclick="showSection('about')">About Us</a></li>
-            <li><a href="#contact" onclick="showSection('contact')">Contact</a></li> <!-- Added Contact link -->
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
@@ -36,7 +131,7 @@
         <p>Explore our range of cloth hanger solutions designed to maximize vertical space in your home.</p>
     </section>
 
-    <section id="products" class="products" style="display: none;">
+    <section id="products">
         <h2>Products</h2>
         <div class="flash">Flash Sale</div>
         <table>
@@ -94,48 +189,33 @@
         </table>
     </section>
 
-    <section id="about" class="about" style="display: none;">
+    <section id="about">
         <h2>About Us</h2>
         <p>At MP Cloth Hangers, we specialize in providing high-quality, space-saving cloth hanger solutions to our customers. Our ceiling-mounted cloth hangers are designed to maximize vertical space in your home, making it easier than ever to dry and store your clothes without taking up valuable floor space.</p>
-        <p>Contact: 9133449704 (Mazhar), 8374166274 (Praveen)</p>
     </section>
 
-    <section id="contact" class="contact" style="display: none;">
+    <section id="contact">
         <h2>Contact Us</h2>
         <p>For inquiries and support, please contact us at:</p>
-        <ul>
-            <li>Phone: 9133449704 (Mazhar)</li>
-            <li>Phone: 8374166274 (Praveen)</li>
-            <li>Email: example@example.com</li>
-        </ul>
+        <p>Phone: 9133449704 (Mazhar), 8374166274 (Praveen)</p>
     </section>
 
     <!-- Footer -->
-    <footer id="footer" style="display: none;">
+    <footer>
         <p>Contact: 9133449704 (Mazhar), 8374166274 (Praveen)</p>
         <p>&copy; 2024 MP CLOTH HANGERS. All rights reserved.</p>
     </footer>
 
     <script>
-        // Function to show section based on id
-        function showSection(sectionId) {
-            // Hide all sections and footer
-            var sections = document.querySelectorAll('section');
-            sections.forEach(function(section) {
-                section.style.display = 'none';
+        // Function to handle smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
-            var footer = document.getElementById('footer');
-            footer.style.display = 'none';
-
-            // Show selected section
-            var selectedSection = document.getElementById(sectionId);
-            if (selectedSection) {
-                selectedSection.style.display = 'block';
-            }
-            if (sectionId === 'about' || sectionId === 'contact') {
-                footer.style.display = 'block';
-            }
-        }
+        });
     </script>
 </body>
 </html>
