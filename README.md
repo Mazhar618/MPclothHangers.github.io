@@ -93,9 +93,16 @@
             100% { opacity: 0.5; }
         }
 
-        /* Product styles */
+        /* Product list styles */
         .products {
             display: none;
+        }
+
+        /* Product image styles */
+        .product-image {
+            width: 100px; /* Adjust width as needed */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -118,24 +125,7 @@
     <!-- Content Sections -->
     <section id="products" class="products">
         <h2>Products</h2>
-        <ul>
-            <li>Regular <span class="flash">₹200 OFF!</span></li>
-            <ul>
-                <li>8 Feet 6 Rods - ₹2800</li>
-                <li>7 Feet 6 Rods - ₹2700</li>
-                <li>6 Feet 6 Rods - ₹2600</li>
-                <li>5 Feet 6 Rods - ₹2500</li>
-                <li>4 Feet 6 Rods - ₹2400</li>
-            </ul>
-            <li>Heavy <span class="flash">₹500 OFF!</span></li>
-            <ul>
-                <li>8 Feet 6 Rods - ₹3100</li>
-                <li>7 Feet 6 Rods - ₹3000</li>
-                <li>6 Feet 6 Rods - ₹2900</li>
-                <li>5 Feet 6 Rods - ₹2800</li>
-                <li>4 Feet 6 Rods - ₹2700</li>
-            </ul>
-        </ul>
+        <ul id="product-list"></ul>
     </section>
 
     <section>
@@ -149,12 +139,76 @@
         <p>&copy; 2024 MP CLOTH HANGERS. All rights reserved.</p>
     </footer>
 
+    <!-- File Input for Uploading Images -->
+    <input type="file" id="file-input" style="display: none;" accept="image/*">
+
     <script>
+        // Array of products
+        var products = [
+            { category: 'Regular', name: '8 Feet 6 Rods', price: '₹2800', image: 'product1.jpg' },
+            { category: 'Regular', name: '7 Feet 6 Rods', price: '₹2700', image: 'product2.jpg' },
+            // Add more products with their image file names
+        ];
+
+        // Function to display products
+        function displayProducts() {
+            var productList = document.getElementById('product-list');
+
+            // Clear existing products
+            productList.innerHTML = '';
+
+            // Loop through products array
+            products.forEach(function(product) {
+                // Create list item for each product
+                var listItem = document.createElement('li');
+
+                // Create an image element
+                var image = document.createElement('img');
+                image.src = product.image;
+                image.alt = product.name; // You can set alt text to the product name
+                image.classList.add('product-image'); // Add a class for styling
+
+                // Append image to list item
+                listItem.appendChild(image);
+
+                // Create paragraph for product details
+                var details = document.createElement('p');
+                details.textContent = product.category + ': ' + product.name + ' - ' + product.price;
+
+                // Append details to list item
+                listItem.appendChild(details);
+
+                // Append list item to product list
+                productList.appendChild(listItem);
+            });
+        }
+
+        // Call the function to display products
+        displayProducts();
+
+        // Event listener for file input change
+        document.getElementById('file-input').addEventListener('change', function(event) {
+            var file = event.target.files[0];
+            if (file) {
+                // Assuming you have a server-side script to handle file uploads
+                // You would send the file to the server and get back the URL
+                // For this example, we'll just display the file name
+                alert('You selected: ' + file.name);
+            }
+        });
+
+        // Function to trigger file input click
+        function uploadImage() {
+            document.getElementById('file-input').click();
+        }
+
+        // Function to show products section
         function showProducts() {
             var productsSection = document.getElementById('products');
             productsSection.style.display = 'block';
         }
 
+        // Hide footer when scrolling
         window.addEventListener('scroll', function() {
             const footer = document.getElementById('footer');
             if (window.scrollY > 100) {
@@ -164,5 +218,8 @@
             }
         });
     </script>
+
+    <!-- Button to Trigger Image Upload -->
+    <button onclick="uploadImage()">Upload Image</button>
 </body>
 </html>
