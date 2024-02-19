@@ -117,6 +117,28 @@
             height: auto; /* Maintain aspect ratio */
             margin-bottom: 10px;
         }
+
+        /* Table styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #fff;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #444;
+            color: #fff;
+        }
+
+        td {
+            background-color: #222;
+        }
     </style>
 </head>
 <body>
@@ -129,6 +151,7 @@
     <!-- Navigation Menu -->
     <nav>
         <ul>
+            <li><a href="#">Home</a></li>
             <li><a href="#" onclick="showProducts()">Products</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact</a></li>
@@ -136,9 +159,66 @@
     </nav>
 
     <!-- Content Sections -->
+    <section id="home">
+        <h2>Welcome to MP Cloth Hangers</h2>
+        <p>Explore our range of cloth hanger solutions designed to maximize vertical space in your home.</p>
+    </section>
+
     <section id="products" class="products">
         <h2>Products</h2>
-        <ul id="product-list"></ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="5">Regular</td>
+                    <td>8 Feet 6 Rods</td>
+                    <td>₹2800</td>
+                </tr>
+                <tr>
+                    <td>7 Feet 6 Rods</td>
+                    <td>₹2700</td>
+                </tr>
+                <tr>
+                    <td>6 Feet 6 Rods</td>
+                    <td>₹2600</td>
+                </tr>
+                <tr>
+                    <td>5 Feet 6 Rods</td>
+                    <td>₹2500</td>
+                </tr>
+                <tr>
+                    <td>4 Feet 6 Rods</td>
+                    <td>₹2400</td>
+                </tr>
+                <tr>
+                    <td rowspan="5">Heavy</td>
+                    <td>8 Feet 6 Rods</td>
+                    <td>₹3100</td>
+                </tr>
+                <tr>
+                    <td>7 Feet 6 Rods</td>
+                    <td>₹3000</td>
+                </tr>
+                <tr>
+                    <td>6 Feet 6 Rods</td>
+                    <td>₹2900</td>
+                </tr>
+                <tr>
+                    <td>5 Feet 6 Rods</td>
+                    <td>₹2800</td>
+                </tr>
+                <tr>
+                    <td>4 Feet 6 Rods</td>
+                    <td>₹2700</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 
     <section>
