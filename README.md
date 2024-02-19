@@ -16,11 +16,110 @@
             background-color: #fff;
             color: #000;
         }
+        
+        /* Resetting default margin and padding */
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        /* Navigation menu styles */
+        nav {
+            background-color: #444;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Content section styles */
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #222;
+        }
+
+        section h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .footer-hidden {
+            transform: translateY(100%);
+        }
+
+        /* Flash styles */
+        .flash {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 5px 10px;
+            display: inline-block;
+            margin-bottom: 10px;
+            animation: flashAnimation 1s ease infinite alternate;
+        }
+
+        @keyframes flashAnimation {
+            0% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+
+        /* Product list styles */
+        .products {
+            display: none;
+        }
+
+        /* Product image styles */
+        .product-image {
+            width: 100px; /* Adjust width as needed */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
-    <!-- Your HTML content here -->
-
     <!-- Header -->
     <header>
         <h1>MP CLOTH HANGERS</h1>
@@ -53,12 +152,22 @@
         <p>&copy; 2024 MP CLOTH HANGERS. All rights reserved.</p>
     </footer>
 
+    <!-- Button to toggle dark mode -->
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
     <script>
         // Array of products
         var products = [
             { category: 'Regular', name: '8 Feet 6 Rods', price: '₹2800', image: 'product1.jpg' },
             { category: 'Regular', name: '7 Feet 6 Rods', price: '₹2700', image: 'product2.jpg' },
-            // Add more products with their image file names
+            { category: 'Regular', name: '6 Feet 6 Rods', price: '₹2600', image: 'product3.jpg' },
+            { category: 'Regular', name: '5 Feet 6 Rods', price: '₹2500', image: 'product4.jpg' },
+            { category: 'Regular', name: '4 Feet 6 Rods', price: '₹2400', image: 'product5.jpg' },
+            { category: 'Heavy', name: '8 Feet 6 Rods', price: '₹3100', image: 'product6.jpg' },
+            { category: 'Heavy', name: '7 Feet 6 Rods', price: '₹3000', image: 'product7.jpg' },
+            { category: 'Heavy', name: '6 Feet 6 Rods', price: '₹2900', image: 'product8.jpg' },
+            { category: 'Heavy', name: '5 Feet 6 Rods', price: '₹2800', image: 'product9.jpg' },
+            { category: 'Heavy', name: '4 Feet 6 Rods', price: '₹2700', image: 'product10.jpg' }
         ];
 
         // Function to display products
@@ -118,8 +227,5 @@
             document.body.classList.toggle('dark-mode');
         }
     </script>
-
-    <!-- Button to toggle dark mode -->
-    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
 </body>
 </html>
