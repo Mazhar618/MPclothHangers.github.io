@@ -18,6 +18,14 @@
         body.dark-mode {
             color: #fff; /* Text color in dark mode */
             background-color: #333; /* Background color in dark mode */
+       body.dark-mode table td {
+    color: #fff;
+}
+ }
+
+        /* Table text color in dark mode */
+        body.dark-mode table td {
+            color: #fff;
         }
 
         /* Other styles remain unchanged */
